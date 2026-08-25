@@ -71,6 +71,8 @@ if v:progname =~? "evim"
   finish
 endif
 
+highlight Comment ctermfg=grey
+
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 

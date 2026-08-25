@@ -71,6 +71,7 @@ ZSH_THEME="bira"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source <(tmuxinator completion zsh)
 
 # User configuration
 
@@ -97,3 +98,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="$HOME/.local/bin:$PATH"
+
+alias gam="/Users/jrbranaa/bin/gam7/gam"
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<
+export EDITOR="nvim"
